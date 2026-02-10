@@ -1,0 +1,331 @@
+/* Importation de polices : une Serif plus dramatique et une sans-serif minimaliste */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,400&family=Montserrat:wght@200;400&display=swap');
+
+:root {
+    --bg-dark: #0f0f0f;      /* Noir profondeur */
+    --bg-card: #1a1a1a;      /* Anthracite doux */
+    --text-main: #d1d1d1;    /* Gris clair soyeux */
+    --accent-gold: #b39359;  /* Or vieilli */
+    --accent-muted: #5e523e; /* Bronze ombragé */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.8;
+    color: var(--text-main);
+    background-color: var(--bg-dark);
+    margin: 0;
+}
+
+/* En-tête tamisée */
+header {
+    background-color: var(--bg-dark);
+    padding: 5rem 1rem 3rem;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.2rem;
+    font-weight: 500;
+    color: var(--accent-gold);
+    letter-spacing: 6px;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-style: italic;
+    letter-spacing: 2px;
+    opacity: 0.8;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 3rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-main);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    padding: 10px 20px;
+    transition: all 0.4s ease;
+}
+
+nav a:hover {
+    color: var(--accent-gold);
+    border-bottom: 1px solid var(--accent-gold);
+}
+
+/* Sections et Mise en page */
+section {
+    max-width: 850px;
+    margin: 6rem auto;
+    padding: 0 30px;
+}
+
+h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    text-align: center;
+    color: var(--accent-gold);
+    margin-bottom: 4rem;
+}
+
+/* Séparateur élégant */
+hr {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--accent-muted), transparent);
+    margin: 2rem 0;
+}
+
+/* Articles : Les Garde-temps */
+article {
+    background: var(--bg-card);
+    padding: 3.5rem;
+    margin-bottom: 4rem;
+    border: 1px solid #252525;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+article h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    color: var(--accent-gold);
+    margin-top: 0;
+}
+
+article p strong {
+    color: var(--accent-gold);
+    font-weight: 400;
+}
+
+button {
+    background-color: transparent;
+    color: var(--accent-gold);
+    border: 1px solid var(--accent-gold);
+    padding: 14px 30px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 1.5rem;
+}
+
+button:hover {
+    background-color: var(--accent-gold);
+    color: var(--bg-dark);
+}
+
+/* Tableau d'Expertise */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}
+
+th {
+    text-align: left;
+    color: var(--accent-gold);
+    border-bottom: 1px solid var(--accent-muted);
+    padding-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+td {
+    padding: 20px 0;
+    border-bottom: 1px solid #222;
+}
+
+/* Formulaire "Salon Privé" */
+form {
+    background: #151515;
+    padding: 4rem;
+    border: 1px solid var(--accent-muted);
+}
+
+input[type="text"], 
+input[type="email"], 
+select, 
+textarea {
+    width: 100%;
+    padding: 12px 0;
+    margin-top: 10px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #444;
+    color: var(--text-main);
+    font-family: inherit;
+}
+
+input:focus {
+    outline: none;
+    border-bottom: 1px solid var(--accent-gold);
+}
+
+input[type="submit"] {
+    background: var(--accent-gold);
+    color: var(--bg-dark);
+    border: none;
+    padding: 18px;
+    margin-top: 3rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 5rem;
+    background: #080808;
+    color: #555;
+}
+
+/* Styles pour la Collection */
+#ma-collection {
+    background-color: var(--bg-card);
+    padding: 3rem;
+    margin: 3rem 0;
+    border: 1px solid var(--accent-muted);
+    border-radius: 4px;
+}
+
+#ma-collection h2 {
+    color: var(--accent-gold);
+    font-family: 'Cormorant Garamond', serif;
+    margin-bottom: 2rem;
+}
+
+.collection-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.collection-item {
+    background-color: #151515;
+    padding: 2rem;
+    border: 1px solid var(--accent-muted);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.collection-item h4 {
+    color: var(--accent-gold);
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+.collection-item p {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+}
+
+.btn-quantite {
+    background-color: var(--accent-gold);
+    color: var(--bg-dark);
+    border: none;
+    padding: 4px 12px;
+    margin: 0 8px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 2px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-quantite:hover {
+    background-color: #c9a469;
+}
+
+.btn-supprimer {
+    background-color: #8b5a5a;
+    color: var(--text-main);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 2px;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-supprimer:hover {
+    background-color: #a66565;
+}
+
+.collection-actions {
+    background-color: #151515;
+    padding: 2rem;
+    border-top: 2px solid var(--accent-muted);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.collection-actions p {
+    margin: 0;
+    font-size: 1.3rem;
+    color: var(--accent-gold);
+    font-weight: bold;
+}
+
+.btn-action {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+#btn-vider {
+    background-color: #5e523e;
+    color: var(--text-main);
+}
+
+#btn-vider:hover {
+    background-color: #7a6a54;
+}
+
+.btn-commander {
+    background-color: var(--accent-gold);
+    color: var(--bg-dark);
+}
+
+.btn-commander:hover {
+    background-color: #c9a469;
+    box-shadow: 0 4px 12px rgba(179, 147, 89, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .collection-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .btn-action {
+        width: 100%;
+    }
+    
+    .collection-container {
+        grid-template-columns: 1fr;
+    }
+}
